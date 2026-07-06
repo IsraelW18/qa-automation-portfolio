@@ -81,7 +81,6 @@ class TestGUIAndRedirections:
     - **system** and **functional**: For redirection and link functionality validation (Scenarios 17 and 18).
     """
 
-    """Scenario_16"""
     @pytest.mark.smoke
     @pytest.mark.gui
     def test_016_main_page_background(self, chrome_driver_setup, logger_setup):
@@ -141,8 +140,6 @@ class TestGUIAndRedirections:
 
         logger.info("Scenario_16 Passed")
 
-
-    """Scenario_17"""
     @pytest.mark.system
     @pytest.mark.functional
     def test_017_branding_link(self, chrome_driver_setup, logger_setup):
@@ -200,8 +197,6 @@ class TestGUIAndRedirections:
 
         logger.info("Scenario_17 Passed")
 
-        
-    """Scenario_18"""
     @pytest.mark.system
     @pytest.mark.functional
     def test_018_linkedin_icon_link(self, chrome_driver_setup, logger_setup):
@@ -266,7 +261,6 @@ class TestGUIAndRedirections:
 class TestReviews:
     """This class groups the users review testing (Manual review and AI review)"""
 
-    """Scenario_19"""
     @pytest.mark.sanity
     @pytest.mark.functional
     def test_019_user_manual_review(self, chrome_driver_setup, logger_setup):
@@ -342,8 +336,6 @@ class TestReviews:
         logger.info("Review appears in the 'Users Review' area")
         logger.info("Scenario_19 Passed")
 
-
-    """Scenario_20"""
     @pytest.mark.integration
     @pytest.mark.functional
     def test_020_user_ai_review(self, chrome_driver_setup, logger_setup):

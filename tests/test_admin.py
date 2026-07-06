@@ -69,7 +69,6 @@ class TestAdminActionsPermissions:
     - Both 'admin' and 'non-admin' user accounts exist in the system with appropriate permissions.
     """
 
-    """Scenario_10"""
     @pytest.mark.functionalAdminTools
     def test_010_add_new_car_action_displayed_for_admin(self, chrome_driver_setup, logger_setup):
         """
@@ -108,7 +107,6 @@ class TestAdminActionsPermissions:
         assert dashboard_page.is_add_new_car_visible(), "Add New Car button not found"
         logger.info("Scenario_10 Passed")
 
-    """Scenario_9"""
     @pytest.mark.functionalAdminTools
     def test_011_delete_action_displayed_for_admin(self, chrome_driver_setup, logger_setup):
         """
@@ -155,8 +153,6 @@ class TestAdminActionsPermissions:
         except AssertionError as e:
             logger.info(f"Scenario_11 Failed.\n{e}")
 
-
-    """Scenario_12"""
     @pytest.mark.functionalAdminTools
     def test_012_add_new_car_action_hidden_for_non_admin(self, chrome_driver_setup, logger_setup):
         """
@@ -201,7 +197,6 @@ class TestAdminActionsPermissions:
         assert not dashboard_page.is_add_new_car_visible(), "'Add New Car' button is visible for Non admin users"
         logger.info("Scenario_12 Passed")
 
-    """Scenario_13"""
     @pytest.mark.functionalAdminTools
     def test_013_delete_action_hidden_for_non_admin(self, chrome_driver_setup, logger_setup):
         """
@@ -274,7 +269,6 @@ class TestAdminActions:
     - Chrome WebDriver is installed and available for test execution.
     """
 
-    """Scenario_14"""
     @pytest.mark.functionalAdminTools
     def test_014_admin_action_add_new_car(self, chrome_driver_setup, logger_setup):
         """
@@ -357,7 +351,6 @@ class TestAdminActions:
         assert new_car_added_message_status, "New car did not added"
         logger.info("Scenario_14 Passed")
 
-    """Scenario_15"""
     @pytest.mark.functionalAdminTools
     def test_015_admin_action_delete_car(self, chrome_driver_setup, logger_setup):
         """

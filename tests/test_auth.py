@@ -100,7 +100,6 @@ class TestSignUpUser:
     :return: None. The tests perform assertions and log results.
     """
 
-    """Scenario_1."""
     @pytest.mark.sanity
     @pytest.mark.regression
     @pytest.mark.functional
@@ -192,8 +191,6 @@ class TestSignUpUser:
             "Failed to SignUp a new user"
         logger.info("Scenario_1 Passed")
 
-
-    """Scenario_2."""
     @pytest.mark.regression
     @pytest.mark.functional
     def test_002_signup_existing_user_shall_rejected(self, chrome_driver_setup, logger_setup):
@@ -280,8 +277,6 @@ class TestSignUpUser:
                 "Signing-up an existing user shall not be allowed"
         logger.info("Scenario_2 Passed")
 
-
-    """Scenario_3."""
     @pytest.mark.regression
     @pytest.mark.functional
     def test_003_mismatch_confirm_password(self, chrome_driver_setup, logger_setup):
@@ -429,7 +424,6 @@ class TestLoginUser:
     - Browser instance is closed after each test execution to clean up resources.
     """
 
-    """Scenario_4."""
     @pytest.mark.system
     @pytest.mark.functional
     def test_004_admin_login_valid_credentials(self, chrome_driver_setup, logger_setup):
@@ -484,7 +478,6 @@ class TestLoginUser:
         assert login_success_message == expected_login_success_message, "Faild to login as 'asdmin' user"
         logger.info("Scenario_4 Passed")
 
-    """Scenario_5"""
     @pytest.mark.system
     @pytest.mark.functional
     def test_005_admin_login_invalid_credentials(self, chrome_driver_setup, logger_setup):
@@ -546,8 +539,6 @@ class TestLoginUser:
         logger.info("Scenario_5 Passed")
 
 
-
-    """Scenario_6"""
     @pytest.mark.sanity
     @pytest.mark.system
     @pytest.mark.functional
@@ -605,7 +596,7 @@ class TestLoginUser:
             "Login as 'non-admin' user with valid credentials should be allowed."
         logger.info("Scenario_6 Passed")
 
-    """Scenario_7"""
+
     @pytest.mark.system
     @pytest.mark.functional
     def test_007_non_admin_login_invalid_credentials(self, chrome_driver_setup, logger_setup):
@@ -693,7 +684,6 @@ class TestLogoutUsers:
     - `@pytest.mark.functional`: Ensures that the logout functionality works as intended.
     """
 
-    """Scenario_8"""
     @pytest.mark.regression
     @pytest.mark.functional
     def test_008_logout_admin(self, chrome_driver_setup, logger_setup):
@@ -755,7 +745,6 @@ class TestLogoutUsers:
             "Logout as 'admin' user should be allowed."
         logger.info("'Scenario_8 Passed")
 
-    """Scenario_9"""
     @pytest.mark.regression
     @pytest.mark.functional
     def test_009_logout_non_admin(self, chrome_driver_setup, logger_setup):
